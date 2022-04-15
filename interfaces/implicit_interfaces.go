@@ -1,14 +1,16 @@
 package interfaces
 
-// An example of implicit interfaces. TabbyCat implements Cat and HouseCat implicitly because it has functions matching
-// the signature of both interfaces. Lion implements only Cat because it does NOT have a function matching the HouseCat
+// An example of implicit interfaces. TabbyCat implements Cat and HouseCat implicitly because it has methods satisfying
+// the signature of both interfaces. Lion implements only Cat because it does NOT have a method satisfying the HouseCat
 // signature.
 // Ref: https://dev.to/mraszplewicz/golang-through-the-eyes-of-a-java-developer-pros-and-cons-25o2
 
+// Cat can Purr
 type Cat interface {
 	Purr() string
 }
 
+// HouseCat can Meow
 type HouseCat interface {
 	Meow() string
 }
