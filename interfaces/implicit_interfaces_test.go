@@ -45,3 +45,16 @@ func TestLion_ImplementsCat_NotHouseCat(t *testing.T) {
 	typeOfHouseCat := reflect.TypeOf((*HouseCat)(nil)).Elem()
 	assert.False(t, typeOfLion.Implements(typeOfHouseCat))
 }
+
+// Both TabbyCat and Lion implement the Animal interface because it has no methods
+func TestTabbyCat_ImplementsAnimal(t *testing.T) {
+	typeOfTabbyCat := reflect.TypeOf((*TabbyCat)(nil))
+	typeOfAnimal := reflect.TypeOf((*Animal)(nil)).Elem()
+	assert.True(t, typeOfTabbyCat.Implements(typeOfAnimal))
+}
+
+func TestLion_ImplementsAnimal(t *testing.T) {
+	typeOfLion := reflect.TypeOf((*Lion)(nil))
+	typeOfAnimal := reflect.TypeOf((*Animal)(nil)).Elem()
+	assert.True(t, typeOfLion.Implements(typeOfAnimal))
+}
