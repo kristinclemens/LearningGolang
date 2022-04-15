@@ -21,14 +21,14 @@ type TabbyCat struct {
 type Lion struct {
 }
 
-func (tabbyCat *TabbyCat) Purr() string {
+func (tabbyCat TabbyCat) Purr() string {
 	return "*purr*"
 }
 
-func (tabbyCat *TabbyCat) Meow() string {
+func (tabbyCat TabbyCat) Meow() string {
 	return "Meow!"
 }
 
-func (lion *Lion) Purr() string {
+func (lion Lion) Purr() string {
 	return "*rumble*"
 }
